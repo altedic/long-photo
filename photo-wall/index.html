@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>瀑布流展示图片</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      text-align: center;
+      font-size: 20px;
+      margin: 20px 0;
+    }
+
+    /* 瀑布流容器样式 */
+    .waterfall-container {
+      column-count: 2;
+      /* 列数 */
+      column-gap: 10px;
+      overflow: hidden;
+      /* 列间距 */
+    }
+
+    /* 图片样式 */
+    .waterfall-container img {
+      width: 100%;
+      /* 图片宽度 */
+      transition: box-shadow 0.3s, transform 0.3s;
+      /* 添加过渡效果 */
+      background: #fff;
+      border: 1px solid #e6e6e6;
+    }
+
+    /* 鼠标覆盖时的样式 */
+    .waterfall-container img:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      /* 添加阴影效果 */
+    }
+  </style>
+</head>
+
+<body>
+  <h2 class="header">我的相册</h2>
+  <div class="waterfall-container">
+    <!-- 这里使用 JavaScript 动态添加图片元素 -->
+  </div>
+
+  <script>
+    // 获取包含图片地址的数组
+    const imageArray = [
+      'assets/photo1.png',
+      'assets/photo3.png',
+      'assets/photo4.png',
+      'assets/photo5.png',
+      'assets/photo6.png',
+      'assets/photo7.png',
+
+      // ... 其他图片地址
+    ];
+
+    // 等待页面加载完成后执行
+    window.addEventListener('load', () => {
+      // 获取瀑布流容器元素
+      const waterfallContainer = document.querySelector('.waterfall-container');
+
+      // 遍历图片数组
+      imageArray.forEach((imageUrl) => {
+        // 创建图片元素
+        const imageElement = document.createElement('img');
+        // 设置图片地址
+        imageElement.src = imageUrl;
+
+        // 将图片元素添加到瀑布流容器中
+        waterfallContainer.appendChild(imageElement);
+      });
+
+      // 等待所有图片加载完成后执行
+      window.addEventListener('load', () => {
+        // 触发瀑布流布局的重排
+        // 这里可以使用第三方库或自己实现瀑布流布局的算法
+        // 例如 Masonry.js、Isotope.js 等
+        // 这里只是简单示例，不包含具体的瀑布流布局算法
+        // 你可以根据实际需求选择合适的瀑布流布局库或实现方式
+        // 例如设置图片元素的位置、大小等样式属性
+        // 或使用 CSS Grid、Flexbox 等实现瀑布流布局
+        // 这里留给你自行探索和实现
+      });
+    });
+  </script>
+</body>
+
+</html>

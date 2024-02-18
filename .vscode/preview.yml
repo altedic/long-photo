@@ -1,0 +1,19 @@
+# .vscode/preview.yml
+autoOpen: true # 打开工作空间时是否自动开启所有应用的预览
+apps:
+  - port: 8081 # 应用的端口
+    # run: npm run serve # 应用的启动命令
+    run: echo hello # 应用的启动命令
+    root: ./photo-wall # 应用的启动目录
+    name: PhotoWall # 应用名称
+    description: 龙年新春在线家庭相册  # 应用描述
+    autoOpen: true # 打开工作空间时是否自动运行命令（优先级高于根级 autoOpen）
+    # autoPreview: false # 是否自动打开预览, 若无则默认为true
+ # 是否自动打开预览, 若无则默认为true
+  - port: 3000 # 服务的端口
+    run: npm run start # 应用的启动命令
+    root: ./photo-wall-node  # 应用的启动目录
+    name: PhotoWall-Server # 应用名称
+    description: 后端服务 # 应用描述
+    autoOpen: true # 打开工作空间时是否自动运行命令（优先级高于根级 autoOpen）
+    autoPreview: false # 是否自动打开预览, 若无则默认为true
