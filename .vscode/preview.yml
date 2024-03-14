@@ -2,8 +2,8 @@
 autoOpen: true # 打开工作空间时是否自动开启所有应用的预览
 apps:
   - port: 8081 # 应用的端口
-    # run: npm run serve # 应用的启动命令
-    run: echo hello # 应用的启动命令
+    run: npm run serve # 应用的启动命令
+    # run: echo hello # 应用的启动命令
     root: ./photo-wall # 应用的启动目录
     name: PhotoWall # 应用名称
     description: 龙年新春在线家庭相册  # 应用描述
